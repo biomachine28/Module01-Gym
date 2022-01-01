@@ -114,5 +114,12 @@ body {
     position: absolute;
     left: 27%;
 }
+.banner-arrow {
+    background-image: url(../img/icons/Arrow.svg);
+    width: 52px;
+    height: 55px;
+    position: absolute;
+    bottom: 0%;
+}
 
 /*section*/
