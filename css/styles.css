@@ -1,12 +1,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
+    background-color: #E5E5E5;
 }
 
 /*header*/
 
 .container {
-    max-width: 1141px;
+    max-width: 1143px;
 }
 .header {
     display: flex;
@@ -38,7 +38,7 @@ body {
     color: #2B3541; /*цвет текста*/
 }
 .header-nav a:hover {
-    color: #FBF138; /*цвет меняется от наведения*/
+    color: orange; /*цвет меняется от наведения*/
 }
 .button {
     display: flex;
@@ -74,15 +74,37 @@ body {
 .content {
     position: absolute;
     max-width: 676px;
-    height: 385px;
     padding-top: 200px;
 }
 .content-title {
-    width: 676px;
     text-transform: uppercase;
     size: 48px;
     font-weight: 700;
     line-height: 60px;
+}
+.content-title span {
+    color: #2B3541;
+    size: 40px;
+    font-weight: 400;
+}
+.content-text {
+    color: #2B3541;
+    size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.content-link {
+    background: #FBF138;
+    Padding: 20px 30px;
+    border-radius: 5px;
+    color: #2B3541;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.content-link:hover {
+    background-color: orange;
 }
 .visual {
     background-image: url(../img/files/@1x/Image\ 1\ screen.png);
@@ -92,3 +114,5 @@ body {
     position: absolute;
     left: 29.5%;
 }
+
+/*section*/
