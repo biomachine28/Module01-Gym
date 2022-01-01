@@ -1,1 +1,94 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
 
+/*header*/
+
+.container {
+    max-width: 1141px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 52px;
+    padding-bottom: 28px;
+}
+.header-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 92px;
+} /*выровнял по горизонтали*/
+.header-logo {
+    background-image: url(../img/logo.svg);
+    width: 97px;
+    height: 30px;
+}
+.header-nav {
+    display: flex; /*сделал список вместо вертикального, горизонтальным*/
+    list-style-type: none; /*убрал точки у списка*/
+    gap: 54px; /*растояние между словами*/
+}
+.header-nav a {
+    text-decoration: none; /*убрал нижнее подчеркивание*/
+    font-size: 18px; /*размер текста*/
+    font-weight: 400; /*жирность текста*/
+    color: #2B3541; /*цвет текста*/
+}
+.header-nav a:hover {
+    color: #FBF138; /*цвет меняется от наведения*/
+}
+.button {
+    display: flex;
+    align-items: center;
+    width: 97px;
+    height: 30px;
+    gap: 30px;
+}
+.button-in {
+    background-image: url(../img/icons/IN.svg);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+.button-fb {
+    background-image: url(../img/icons/FB.svg);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+/*main, wrapper*/
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1326px;
+    height: 852px;
+    position: relative;
+}
+.content {
+    position: absolute;
+    max-width: 676px;
+    height: 385px;
+    padding-top: 200px;
+}
+.content-title {
+    width: 676px;
+    text-transform: uppercase;
+    size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+.visual {
+    background-image: url(../img/files/@1x/Image\ 1\ screen.png);
+    width: 996px;
+    height: 852px;
+    background-repeat: no-repeat; /*чтобы картинка не повторялась*/
+    position: absolute;
+    left: 29.5%;
+}
