@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #E5E5E5;
+    background-color: white;
 }
 
 /*header*/
@@ -70,9 +70,11 @@ body {
     max-width: 1326px;
     height: 852px;
     position: relative;
+    margin: 0 auto;
 }
 .content {
-    position: absolute;
+    position: relative;
+    left: 80px;
     max-width: 676px;
     padding-top: 200px;
 }
@@ -80,7 +82,7 @@ body {
     text-transform: uppercase;
     size: 48px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 60px; /*пространство между строками по высоте*/
 }
 .content-title span {
     color: #2B3541;
@@ -92,6 +94,8 @@ body {
     size: 18px;
     font-weight: 400;
     margin-bottom: 40px;
+    position: relative;
+    left: 80px;
 }
 .content-link {
     background: #FBF138;
@@ -102,6 +106,9 @@ body {
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
+    position: relative;
+    left: 80px;
+    z-index: 2;
 }
 .content-link:hover {
     background-color: orange;
@@ -118,8 +125,105 @@ body {
     background-image: url(../img/icons/Arrow.svg);
     width: 52px;
     height: 55px;
-    position: absolute;
-    bottom: 0%;
+    position: relative;
+    top: 93.5%;
+    right: 90%;
 }
 
-/*section*/
+/*menu*/
+
+.menu {
+    margin-top: 160px;
+    margin-bottom: 159px;
+}
+.container {
+    max-width: 1143px;
+    margin: 0 auto; /*элемент автоматически будет выстраиваться по центру браузера*/
+}
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase; /*все буквы заглавные*/
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: 367px 367px 367px;
+    grid-template-rows: 600px;
+    gap: 20px;
+}
+.menu-grid-one {
+    background-image: url(../img/files/@1x/maraphon.png);
+}
+.menu-grid-two {
+    background-image: url(../img/files/@1x/Vebinar\ 1.png);
+}
+.menu-grid-tree {
+    background-image: url(../img/files/@1x/Vebinar\ 2.png);
+}
+.button-one {
+    background-color: #FBF138;
+    width: 126px;
+    height: 47px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 381px;
+    left: 240px;
+}
+.button-two {
+    background-color: #FBF138;
+    width: 126px;
+    height: 47px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 383px;
+    left: 241px;
+}
+.button-tree {
+    background-color: #FBF138;
+    width: 126px;
+    height: 47px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 383px;
+    left: 241px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #2B3541;
+    margin-left: 30px;
+}
+.menu-grid span {
+    font-size: 18px;
+    display: block;   
+    margin-top: 30px;
+    color: #2B3541;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+.menu-grid a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FBF138;
+    background-color: #2B3541;
+    font-size: 16px;
+    font-weight: 700;
+    width: 221px;
+    height: 64px;
+    margin: 0 auto;
+    display: flex; /*для того, чтобы выровнять текст по центру*/
+    align-items: center;
+    justify-content: center;
+}
