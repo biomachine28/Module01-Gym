@@ -1,35 +1,43 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: white;
+    color: #2B3541;
 }
 
 /*header*/
 
 .container {
     max-width: 1143px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 52px;
-    padding-bottom: 28px;
+    padding-top: 50px;
+    padding-bottom: 27px;
 }
 .header-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 92px;
+    gap: 92px;  /*потом это расстояние попробовать сделать через flex-basis*/
 } /*выровнял по горизонтали*/
 .header-logo {
+    display: block;
     background-image: url(../img/logo.svg);
     width: 97px;
     height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-nav {
     display: flex; /*сделал список вместо вертикального, горизонтальным*/
     list-style-type: none; /*убрал точки у списка*/
     gap: 54px; /*растояние между словами*/
+    padding-left: 0;
 }
 .header-nav a {
     text-decoration: none; /*убрал нижнее подчеркивание*/
@@ -38,7 +46,7 @@ body {
     color: #2B3541; /*цвет текста*/
 }
 .header-nav a:hover {
-    color: orange; /*цвет меняется от наведения*/
+    color: #FBF138; /*цвет меняется от наведения*/
 }
 .button {
     display: flex;
@@ -62,46 +70,51 @@ body {
     background-color: transparent;
 }
 
-/*main, wrapper*/
 
-.wrapper {
+/*main, banner*/
+
+.banner {
+    margin-bottom: 161px;
+    padding-bottom: 277px;
+}
+.banner-flex {
     display: flex;
-    justify-content: space-between;
-    max-width: 1326px;
-    height: 852px;
     position: relative;
-    margin: 0 auto;
+    width: 100%;
 }
 .content {
-    position: relative;
-    left: 80px;
-    max-width: 676px;
-    padding-top: 200px;
+    padding-top: 225px;
 }
 .content-title {
+    width: 635px;
     text-transform: uppercase;
-    size: 48px;
+}
+h1 {
     font-weight: 700;
-    line-height: 60px; /*пространство между строками по высоте*/
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    margin: 0;
 }
 .content-title span {
-    color: #2B3541;
-    size: 40px;
+    display: block;
+    font-size: 40px;
     font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .content-text {
-    color: #2B3541;
     size: 18px;
     font-weight: 400;
     margin-bottom: 40px;
     position: relative;
     left: 80px;
+    display: block;
+    margin-bottom: 50px;
 }
 .content-link {
     background: #FBF138;
-    Padding: 20px 30px;
-    border-radius: 5px;
-    color: #2B3541;
+    Padding: 20px 30px;   
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
@@ -109,10 +122,14 @@ body {
     position: relative;
     left: 80px;
     z-index: 2;
+    transition: 0.2s;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%); /*создает подсветку для кнопки*/
 }
 .content-link:hover {
-    background-color: orange;
+    color: #FBF138;
+    background-color: #2B3541;
 }
+
 .visual {
     background-image: url(../img/files/@1x/Image\ 1\ screen.png);
     width: 996px;
@@ -126,8 +143,9 @@ body {
     width: 52px;
     height: 55px;
     position: relative;
-    top: 93.5%;
-    right: 90%;
+    top: 796px;
+    right: 631px;
+    background-repeat: no-repeat;
 }
 
 /*menu*/
@@ -136,94 +154,295 @@ body {
     margin-top: 160px;
     margin-bottom: 159px;
 }
-.container {
-    max-width: 1143px;
-    margin: 0 auto; /*элемент автоматически будет выстраиваться по центру браузера*/
-}
-h1 {
+h2 {
     font-weight: 700;
     font-size: 40px;
-    text-transform: uppercase; /*все буквы заглавные*/
+    Line-height: 50px;
 }
-.menu-grid {
-    display: grid;
-    grid-template-columns: 367px 367px 367px;
-    grid-template-rows: 600px;
+.menu-flex {
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
-.menu-grid-one {
+/*Меняем фонт подсветки при наведении*/
+.gradient-bg {
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+}
+.gradient-bg:hover {
+    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
+}
+.menu-flex-one {
     background-image: url(../img/files/@1x/maraphon.png);
+    position: relative;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
-.menu-grid-two {
+.menu-flex-two {
     background-image: url(../img/files/@1x/Vebinar\ 1.png);
+    position: relative;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
-.menu-grid-tree {
+.menu-flex-three {
     background-image: url(../img/files/@1x/Vebinar\ 2.png);
+    position: relative;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
-.button-one {
-    background-color: #FBF138;
-    width: 126px;
-    height: 47px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 381px;
-    left: 240px;
-}
-.button-two {
-    background-color: #FBF138;
-    width: 126px;
-    height: 47px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 383px;
-    left: 241px;
-}
-.button-tree {
-    background-color: #FBF138;
-    width: 126px;
-    height: 47px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 383px;
-    left: 241px;
-}
-h2 {
+.menu-title {
     font-weight: 700;
     font-size: 28px;
     line-height: 35px;
-    color: #2B3541;
-    margin-left: 30px;
-}
-.menu-grid span {
-    font-size: 18px;
-    display: block;   
+    padding-left: 30px;
     margin-top: 30px;
-    color: #2B3541;
-    line-height: 27px;
-    margin-bottom: 20px;
+    margin-bottom: 57px;
 }
-.menu-grid a {
+.menu-title span {
     display: block;
-    cursor: pointer;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.menu-button {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 126px;
+    height: 47px;
+    background: #FBF138;
+    opacity: 1;
+}
+.menu-button p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.button-gr {
+    color: #FBF138;
+    background: #2B3541;
+    padding: 20px 37px;
+    margin-left: 30px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #FBF138;
-    background-color: #2B3541;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0;
+}
+.gradient-bg:hover .button-gr {
+    opacity: 1;
+}
+.gradient-bg:hover .menu-button { /*в этом блоке действие направлено на этот блок*/
+    opacity: 0;
+}
+
+
+/*menu-other*/
+
+.menu-other {
+    margin-bottom: 160px;
+}
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.data {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
+.grid-item {
+    border: 1px solid #2B3541;
+    display: flex;
+    flex-direction: column; /*помогает выставить в колонку, меняет горизонтальную ось на вертикальную*/
+    justify-content: space-between; /*равное расстояние между блоками, но благодаря предыдущему свойству, по вертикали*/
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.grid-item:hover {
+    box-shadow: 0px 13px 24px rgba(9, 87, 87, 0.596); /*создает подсветку за блоком*/
+    background-color: #F3F3F3;
+    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
+    border: none;
+}
+.data-two {
+    margin-top: 20px;
+    position: absolute;
+    right: 30px;
+    color: #010101;
+}
+.image-text {
+    margin-left: 30px;
+    position: absolute;
+    bottom: 0px;
+}
+h3 {
+    font-weight: 700;
+    size: 18px;
+}
+.text-hidden {
+    margin-bottom: 20px;
+    display: none;
+    color: #2B3541;
+    size: 18px;
+}
+.grid-item:hover .text-hidden {
+    display: block;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*выставил в три одинаковые колонки*/
+    grid-template-rows: 250px 60px 90px 280px; /*высота верхнего блока 250 пикселей, следующий длиннее, поэтому указываем разницу. Последняя цифра - это нижний средний блок*/
+    gap: 20px;
+}
+.grid-item:nth-child(1) {
+    grid-column: 1 / 2; /*указываем положение блока по вертикальным линиям*/
+    grid-row: 1 / 2; /*по горизонтальным*/
+}
+.grid-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+.grid-item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.grid-item:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    border: none;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
+    opacity: 0.7;
+    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
+}.grid-item:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}.grid-item:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+}
+
+
+/*Grey*/
+
+.grey {
+    background-color: #F3F3F3;
+}
+.grey-item {
+    max-width: 590px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.grey-title {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    opacity: 1;
+}
+.grey-title:before {
+    content: ""; /*без этого свойства псевдоэлемент не отобразится*/
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #FBF138;
+    position: absolute;
+    bottom: 25%;
+    right: 96.5%;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    opacity: 0.5;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.form-email {
+    border: none;
+    padding: 19px 130px 19px 19px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.form-submit {
+    padding: 20px 43px;
+    cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    width: 221px;
-    height: 64px;
-    margin: 0 auto;
-    display: flex; /*для того, чтобы выровнять текст по центру*/
-    align-items: center;
-    justify-content: center;
+    border: none;
+    background-color: #FBF138;
+}
+.form-submit:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+}
+.checkbox:checked, /*Обнулил кнопку согласия на обработку персональных данных*/
+.checkbox:not(:checked){
+   position: absolute;
+   left:-9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+   position: relative;
+   padding-left: 35px;
+   cursor:pointer;
+}
+.checkbox:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-image: url(../img/icons/check\ box\ empty.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*состояние кнопки, когда она не нажата*/
+.checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-image: url(../img/icons/check_box.svg);
+    background-repeat: no-repeat;
+    background-size: cover;   
+} /*состояние нажатой кнопки*/
+.agreement {
+    display: inline-block;
+}
+label {
+    font-size: 11px;
+    color: #2B3541;
+}
+label a {
+    color: #2B3541;
+}
+
+
+
+@media (max-width: 360px) {
+    .menu-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
